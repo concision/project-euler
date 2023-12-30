@@ -1,16 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageId>Math</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>concision,thenintendodude</Authors>
+
         <RootNamespace>Net.ProjectEuler.Math</RootNamespace>
         <AssemblyName>Net.ProjectEuler.Math</AssemblyName>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Combinatorics\"/>
-        <Folder Include="Sieves\"/>
+        <Folder Include="Combinatorics\" />
+        <Folder Include="Sieves\" />
     </ItemGroup>
 
 </Project>

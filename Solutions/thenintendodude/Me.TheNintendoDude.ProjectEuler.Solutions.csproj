@@ -1,6 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <Version>0.1.0</Version>
+        <Authors>thenintendodude</Authors>
+        
         <RootNamespace>Me.TheNintendoDude.ProjectEuler.Solutions</RootNamespace>
         <AssemblyName>Me.TheNintendoDude.ProjectEuler.Solutions</AssemblyName>
         <OutputType>Exe</OutputType>
@@ -10,7 +13,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Library\Framework\Framework.csproj" />
+        <ProjectReference Include="..\..\Library\Framework\Net.ProjectEuler.Framework.csproj" />
     </ItemGroup>
 
 </Project>
