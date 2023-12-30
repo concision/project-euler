@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>Me.Concision.ProjectEuler.Solutions</RootNamespace>
+        <AssemblyName>Me.Concision.ProjectEuler.Solutions</AssemblyName>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Library\Framework\Framework.csproj" />
+    </ItemGroup>
+
+</Project>
