@@ -1,8 +1,8 @@
 ### Project Specific ###
 
 
-# Created by https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+iml,windows,linux,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+iml,windows,linux,macos
+# Created by https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+all,windows,linux,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+all,windows,linux,macos
 
 ### C++ ###
 # Prerequisites
@@ -443,7 +443,7 @@ obj/
 /node_modules
 /wwwroot/node_modules
 
-### Intellij+iml ###
+### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
@@ -522,13 +522,14 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-### Intellij+iml Patch ###
-# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+### Intellij+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
 
-*.iml
-modules.xml
-.idea/misc.xml
-*.ipr
+.idea/*
+
+!.idea/codeStyles
+!.idea/runConfigurations
 
 ### Linux ###
 
@@ -830,4 +831,4 @@ ehthumbs_vista.db
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+iml,windows,linux,macos
+# End of https://www.toptal.com/developers/gitignore/api/csharp,dotnetcore,c++,rust,visualstudio,visualbasic,intellij+all,windows,linux,macos
