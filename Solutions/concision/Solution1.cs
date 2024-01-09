@@ -43,11 +43,12 @@ public sealed class Solution1 : Solver<ulong>
     }
 
     [Solution("Arithmetic Sum")]
-    public void ArithmeticSum()
+    public Task<int> ArithmeticSum()
     {
         // imagine I actually did the combinatorics
         Answer = /* ... */ 0;
         BigInteger x = 3;
         var z = x * (x + 1) / 3;
+        return Task.FromResult(304);
     }
 }
