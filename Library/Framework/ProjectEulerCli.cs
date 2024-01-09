@@ -5,6 +5,10 @@ using Net.ProjectEuler.Framework.Cli;
 
 namespace Net.ProjectEuler.Framework;
 
+public interface IProjectEulerCli
+{
+    Task<int> ExecuteCliCommand(params string[] cliArguments);
+}
 public class ProjectEulerCli : IProjectEulerCli
 {
     private readonly ILogger logger;

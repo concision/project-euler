@@ -32,11 +32,14 @@ public class ProjectEulerStartup : IDisposable
         serviceCollection.AddSingleton<ILoggerFactory>(_ => LoggerFactory.Create(builder =>
         {
             builder.AddFilter("*", LogLevel.Trace);
-            builder.AddConsoleFormatter<EulerConsoleFormatter, CustomOptions>();
+            builder.AddConsoleFormatter<EulerConsoleFormatter, EulerLoggingOptions>(options =>
+            {
+                options.ExceptionIndentation = false;
+            });
 
             builder.AddConsole(options =>
             {
-                options.FormatterName = nameof(EulerConsoleFormatter);
+                options.FormatterName = EulerConsoleFormatter.Name;
                 options.LogToStandardErrorThreshold = LogLevel.Warning;
             });
         }));

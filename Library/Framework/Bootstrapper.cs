@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Net.ProjectEuler.Framework.Cli;
 using Net.ProjectEuler.Framework.Cli.Commands;
 using Net.ProjectEuler.Framework.Hooks;
+using Net.ProjectEuler.Framework.Service;
 
 namespace Net.ProjectEuler.Framework;
 
@@ -44,21 +45,28 @@ public static class Bootstrapper
     public static TServiceCollection AddEulerBenchmarkFramework<TServiceCollection>(this TServiceCollection serviceCollection)
         where TServiceCollection : IServiceCollection
     {
+        // overridden by consumer
         serviceCollection.AddSingleton<ILogger>(_ => NullLogger<IProjectEulerCli>.Instance);
 
+        // command line parsing
         serviceCollection.AddSingleton<Parser>(_ => new Parser(settings =>
         {
             // This disables CommandLineParser's default behavior of erroring out if it encounters an unknown CLI flag during CLI argument parsing
             settings.IgnoreUnknownArguments = true;
             settings.MaximumDisplayWidth = 120;
         }));
-        serviceCollection.AddScoped<CliCommand, TestCliCommand>();
         serviceCollection.AddScoped<CliCommand, ExecuteSolutionCliCommand>();
-
         serviceCollection.AddSingleton<IProjectEulerCli, ProjectEulerCli>();
+
+        // [Solution]-related services
+        serviceCollection.AddTransient<ISolutionService, SolutionService>();
         serviceCollection.AddTransient<ISolutionProvider, SolutionProvider>();
         serviceCollection.AddTransient<ISolutionSelector, LastModifiedSourceFileSelector>();
         serviceCollection.AddTransient<ISolutionGrouper, ProjectEulerAttributeSolutionGrouper>();
+
+        // generic utilities
+        serviceCollection.AddTransient<IStopwatchService, StopwatchService>();
+        serviceCollection.AddTransient<ITreeListRenderer, TreeListRenderer>();
 
         return serviceCollection;
     }

@@ -1,5 +1,6 @@
 ﻿using Net.ProjectEuler.Framework.Api;
 using Net.ProjectEuler.Framework.Cli.Commands;
+using Net.ProjectEuler.Framework.Service;
 
 namespace Net.ProjectEuler.Framework.Hooks;
 
@@ -8,5 +9,5 @@ namespace Net.ProjectEuler.Framework.Hooks;
 /// </summary>
 public interface IIncludeProvider
 {
-    Task<string> FetchAsync(SolutionMethod solution, IncludeAttribute request);
+    Task<string?> FetchAsync(SolutionMethod solution, IncludeAttribute request);
 }

@@ -1,16 +1,17 @@
 ﻿using CommandLine;
 using Microsoft.Extensions.Logging;
+using Net.ProjectEuler.Framework.Cli;
 
-namespace Net.ProjectEuler.Framework.Cli.Commands;
+namespace Me.Concision.ProjectEuler.Cli;
 
-[Verb("test", HelpText = "Executes logging test")]
-public sealed class TestArgs : CliArgs
+[Verb("demo", HelpText = "Runs a demonstration of the CLI API")]
+public sealed class DemoArgs : CliArgs
 {
 }
 
-public class TestCliCommand(ILogger logger) : CliCommand<TestArgs>
+public class DemoCliCommand(ILogger logger) : CliCommand<DemoArgs>
 {
-    public override Task<int> ExecuteAsync(TestArgs args)
+    public override Task<int> ExecuteAsync(DemoArgs args)
     {
         logger.LogInformation("Information");
         logger.LogCritical("Critical");

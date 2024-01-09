@@ -4,7 +4,7 @@
         <Version>0.1.0</Version>
         <Authors>concision</Authors>
         
-        <RootNamespace>Me.Concision.ProjectEuler.Solutions</RootNamespace>
+        <RootNamespace>Me.Concision.ProjectEuler</RootNamespace>
         <AssemblyName>Me.Concision.ProjectEuler.Solutions</AssemblyName>
         <OutputType>Exe</OutputType>
         <TargetFramework>net8.0</TargetFramework>

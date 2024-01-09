@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using Net.ProjectEuler.Framework.Api;
+﻿using Net.ProjectEuler.Framework.Api;
 
 namespace Me.Concision.ProjectEuler.Solutions;
 
@@ -18,9 +17,12 @@ public sealed class Solution1 : Solver<ulong>
 
     // or alternatively using a prepare
     [Prepare]
-    [Include("https://projecteuler.net/resources/documents/0081_matrix.txt")]
-    [Include] // checks projecteuler.net problem for an embedded matrix or file
-    public void Prepare(string rawMatrixText, int[][] autoConvertedFromMatrix)
+    public void Prepare(
+        [Include("https://projecteuler.net/resources/documents/0081_matrix.txt")]
+        string rawMatrixText,
+        [Include] // checks projecteuler.net problem for an embedded matrix or file
+        int[][] autoConvertedFromMatrix
+    )
     {
         Matrix = null;
         // manually parse matrix maybe?
@@ -43,12 +45,8 @@ public sealed class Solution1 : Solver<ulong>
     }
 
     [Solution("Arithmetic Sum")]
-    public Task<int> ArithmeticSum()
+    public int ArithmeticSum()
     {
-        // imagine I actually did the combinatorics
-        Answer = /* ... */ 0;
-        BigInteger x = 3;
-        var z = x * (x + 1) / 3;
-        return Task.FromResult(304);
+        return -1;
     }
 }

@@ -1,17 +1,16 @@
 ﻿using System.Reflection;
 using Net.ProjectEuler.Framework.Api;
-using Net.ProjectEuler.Framework.Cli.Commands;
 
 namespace Net.ProjectEuler.Framework.Hooks;
 
 public interface ISolutionProvider
 {
-    Task<IEnumerable<MethodInfo>> DiscoverAllSolutions(ExecuteSolutionArgs args);
+    Task<IEnumerable<MethodInfo>> DiscoverAllSolutions();
 }
 
 public class SolutionProvider : ISolutionProvider
 {
-    public Task<IEnumerable<MethodInfo>> DiscoverAllSolutions(ExecuteSolutionArgs args)
+    public Task<IEnumerable<MethodInfo>> DiscoverAllSolutions()
     {
         return Task.FromResult<IEnumerable<MethodInfo>>(AppDomain.CurrentDomain.GetAssemblies()
             .AsParallel()

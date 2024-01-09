@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using Net.ProjectEuler.Framework.Cli.Commands;
+﻿using Net.ProjectEuler.Framework.Cli.Commands;
+using Net.ProjectEuler.Framework.Service;
 
 namespace Net.ProjectEuler.Framework.Hooks;
 
@@ -8,12 +8,12 @@ namespace Net.ProjectEuler.Framework.Hooks;
 /// </summary>
 public interface ISolutionSelector
 {
-    Task<IEnumerable<SolutionMethod>> SelectBenchmarksAsync(ExecuteSolutionArgs args, IEnumerable<SolutionMethod> methods);
+    Task<IEnumerable<SolutionMethod>> SelectBenchmarksAsync(IEnumerable<SolutionMethod> methods);
 }
 
-public class LastModifiedSourceFileSelector(ILogger logger) : ISolutionSelector
+public class LastModifiedSourceFileSelector : ISolutionSelector
 {
-    public async Task<IEnumerable<SolutionMethod>> SelectBenchmarksAsync(ExecuteSolutionArgs args, IEnumerable<SolutionMethod> methods)
+    public Task<IEnumerable<SolutionMethod>> SelectBenchmarksAsync(IEnumerable<SolutionMethod> methods)
     {
         var methodsByLastModifiedSourceFile = methods
             .Select(benchmarkMethod => (
@@ -26,7 +26,7 @@ public class LastModifiedSourceFileSelector(ILogger logger) : ISolutionSelector
             .OrderByDescending(method => method.LastModified)
             .ToArray();
         var lastModifiedSolverType = methodsByLastModifiedSourceFile.FirstOrDefault().Method?.SolverType;
-        return methodsByLastModifiedSourceFile.Where(method => method.Method.SolverType == lastModifiedSolverType)
-            .Select(method => method.Method);
+        return Task.FromResult(methodsByLastModifiedSourceFile.Where(method => method.Method.SolverType == lastModifiedSolverType)
+            .Select(method => method.Method));
     }
 }
