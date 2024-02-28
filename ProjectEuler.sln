@@ -14,15 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Items", ".Solutio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiTable", "Library\AsciiTable\Net.ProjectEuler.AsciiTable.csproj", "{EFA44598-2C6C-4BD3-A019-F90E8044F7CD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Library\Framework\Net.ProjectEuler.Framework.csproj", "{910A3621-9D82-4A16-B218-4096C44DF449}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.ProjectEuler.Framework", "Library\Framework\Dev.Concision.ProjectEuler.Framework.csproj", "{910A3621-9D82-4A16-B218-4096C44DF449}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Library\Math\Net.ProjectEuler.Math.csproj", "{B13D5F7E-9064-40B8-979F-C77E41B76083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "concision", "Solutions\concision\Me.Concision.ProjectEuler.Solutions.csproj", "{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.ProjectEuler", "Solutions\concision\Dev.Concision.ProjectEuler.csproj", "{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thenintendodude", "Solutions\thenintendodude\Me.TheNintendoDude.ProjectEuler.Solutions.csproj", "{6C81B853-C6AA-4C86-8CB8-663A10099914}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Me.TheNintendoDude.ProjectEuler", "Solutions\thenintendodude\Me.TheNintendoDude.ProjectEuler.csproj", "{6C81B853-C6AA-4C86-8CB8-663A10099914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.Ascii", "Library\Ascii\Dev.Concision.Ascii.csproj", "{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,14 +42,14 @@ Global
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFA44598-2C6C-4BD3-A019-F90E8044F7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFA44598-2C6C-4BD3-A019-F90E8044F7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFA44598-2C6C-4BD3-A019-F90E8044F7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFA44598-2C6C-4BD3-A019-F90E8044F7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,7 +58,7 @@ Global
 		{910A3621-9D82-4A16-B218-4096C44DF449} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
 		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC} = {BEE686AE-9408-480D-AEB6-B9BB43634E11}
 		{B13D5F7E-9064-40B8-979F-C77E41B76083} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
-		{EFA44598-2C6C-4BD3-A019-F90E8044F7CD} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
 		{6C81B853-C6AA-4C86-8CB8-663A10099914} = {BEE686AE-9408-480D-AEB6-B9BB43634E11}
+		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
 	EndGlobalSection
 EndGlobal
