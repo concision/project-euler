@@ -1,32 +1,21 @@
 ﻿using Net.ProjectEuler.Framework.Api;
 
-namespace Me.Concision.ProjectEuler.Solutions;
+namespace Dev.Concision.ProjectEuler.Solutions;
 
 [ProjectEuler(1)]
 public sealed class Solution1 : Solver<ulong>
 {
-    [Parameter]
-    public int Target { get; set; } = 1000;
+    [Parameter] // [Sign(NonNegative)]
+    public required int Target { get; set; } = 1000;
 
-    [Parameter]
-    public int[] Multiples { get; set; } = [3, 5];
+    [Parameter] // [Set] [Coprime] [Sign(Positive)]
+    public required int[] Multiples { get; set; } = [3, 5];
 
-    [Parameter]
-    [Include] // checks projecteuler.net problem for embedded matrix or file, and intelligent parses it
-    public int[][] Matrix { get; set; }
-
-    // or alternatively using a prepare
-    [Prepare]
-    public void Prepare(
-        [Include("https://projecteuler.net/resources/documents/0081_matrix.txt")]
-        string rawMatrixText,
-        [Include] // checks projecteuler.net problem for an embedded matrix or file
-        int[][] autoConvertedFromMatrix
-    )
-    {
-        Matrix = null;
-        // manually parse matrix maybe?
-    }
+    public override TestCase<ulong>[] TestCases =>
+    [
+        new() {Parameters = {[nameof(Target)] = 10, [nameof(Multiples)] = (int[]) [3, 5]}, Answer = 23},
+        new() {Parameters = {[nameof(Target)] = 1000, [nameof(Multiples)] = (int[]) [3, 5]}, Answer = 233168},
+    ];
 
     [Solution("Naive Iteration", Date = "2016-03-20")]
     public void NaiveIteration()
@@ -47,6 +36,6 @@ public sealed class Solution1 : Solver<ulong>
     [Solution("Arithmetic Sum")]
     public int ArithmeticSum()
     {
-        return -1;
+        throw new NotImplementedException();
     }
 }

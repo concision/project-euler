@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Net.ProjectEuler.Framework.Cli;
 
-namespace Me.Concision.ProjectEuler.Cli;
+namespace Dev.Concision.ProjectEuler.Cli;
 
 [Verb("demo", HelpText = "Runs a demonstration of the CLI API")]
 public sealed class DemoArgs : CliArgs
