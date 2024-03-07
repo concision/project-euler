@@ -1,11 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Net.ProjectEuler.Framework.Logging;
 
 namespace Net.ProjectEuler.Framework;
 
+/// <summary>
+/// Start entrypoint for bootstrapping the Project Euler framework as a CLI application.
+/// </summary> 
 public class ProjectEulerStartup : IDisposable
 {
+    #region Entrypoints
+
     public static async Task<int> Main(params string[] args)
     {
         return await Main<ProjectEulerStartup>(args);
@@ -19,31 +22,15 @@ public class ProjectEulerStartup : IDisposable
         return await startup.ExecuteCliCommand(args);
     }
 
+    #endregion
+
 
     public IServiceProvider? ServiceProvider { get; private set; }
-
-    private bool isDisposed;
 
     protected virtual void Bootstrap(IServiceCollection? serviceCollection = null, Action<IServiceCollection>? setupCollection = null)
     {
         serviceCollection ??= new ServiceCollection();
         serviceCollection.AddEulerBenchmarkFramework();
-
-        serviceCollection.AddSingleton<ILoggerFactory>(_ => LoggerFactory.Create(builder =>
-        {
-            builder.AddFilter("*", LogLevel.Trace);
-            builder.AddConsoleFormatter<EulerConsoleFormatter, EulerLoggingOptions>(options =>
-            {
-                options.ExceptionIndentation = false;
-            });
-
-            builder.AddConsole(options =>
-            {
-                options.FormatterName = EulerConsoleFormatter.Name;
-                options.LogToStandardErrorThreshold = LogLevel.Warning;
-            });
-        }));
-        serviceCollection.AddSingleton<ILogger>(serviceProvider => serviceProvider.GetRequiredService<ILoggerFactory>().CreateLogger(nameof(IProjectEulerCli)));
 
         BootstrapServiceCollection(serviceCollection);
         setupCollection?.Invoke(serviceCollection);
@@ -66,6 +53,8 @@ public class ProjectEulerStartup : IDisposable
 
 
     #region IDisposable
+
+    private bool isDisposed;
 
     protected virtual void Dispose(bool disposing)
     {

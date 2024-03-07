@@ -11,8 +11,8 @@ namespace Net.ProjectEuler.Framework.Logging;
 
 public sealed partial class EulerConsoleFormatter : ConsoleFormatter, IDisposable
 {
-    public static readonly string Name = nameof(EulerConsoleFormatter);
-    public static readonly string NoPrefix = new((char) 0x7, 1);
+    public new static readonly string Name = nameof(EulerConsoleFormatter);
+    public static readonly string NoLoggingPrefix = new((char) 0x7, 1);
 
     private readonly IDisposable? optionsReloadToken;
     private EulerLoggingOptions options;
@@ -30,7 +30,7 @@ public sealed partial class EulerConsoleFormatter : ConsoleFormatter, IDisposabl
         if (message is null)
             return;
 
-        if (!message.StartsWith(NoPrefix, StringComparison.Ordinal))
+        if (!message.StartsWith(NoLoggingPrefix, StringComparison.Ordinal))
         {
             textWriter.Write(Output.Bold().Black("["));
             textWriter.Write(time.ToString("dd HH:mm:ss.ffffff").Pastel(Color.DodgerBlue));
@@ -47,7 +47,7 @@ public sealed partial class EulerConsoleFormatter : ConsoleFormatter, IDisposabl
             LogLevel.Critical => (Output.Bold("ERROR".Pastel(Color.Red)), Color.Red),
             _ => (Output.Bold("?????".Pastel(Color.White)), Color.White),
         };
-        if (!message.StartsWith(NoPrefix, StringComparison.Ordinal))
+        if (!message.StartsWith(NoLoggingPrefix, StringComparison.Ordinal))
             textWriter.Write($"{logLevelPrefix} ");
         textWriter.WriteLine(message.Pastel(messageColor));
         if (logEntry.Exception is not null)

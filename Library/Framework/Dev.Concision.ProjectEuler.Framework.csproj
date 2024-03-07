@@ -28,4 +28,12 @@
         <PackageReference Include="Pastel" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Ascii\Dev.Concision.Ascii.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Ascii\Dev.Concision.Ascii.csproj" />
+    </ItemGroup>
+
 </Project>

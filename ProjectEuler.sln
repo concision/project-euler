@@ -25,6 +25,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Me.TheNintendoDude.ProjectE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.Ascii", "Library\Ascii\Dev.Concision.Ascii.csproj", "{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{7AB2602B-8266-4A24-B6A4-8094C6A5A8E6}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\PLANNED.md = Documentation\PLANNED.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,5 +66,6 @@ Global
 		{B13D5F7E-9064-40B8-979F-C77E41B76083} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
 		{6C81B853-C6AA-4C86-8CB8-663A10099914} = {BEE686AE-9408-480D-AEB6-B9BB43634E11}
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
+		{7AB2602B-8266-4A24-B6A4-8094C6A5A8E6} = {D8A739EF-6F65-4B46-AA24-47E6F5E33042}
 	EndGlobalSection
 EndGlobal

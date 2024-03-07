@@ -1,4 +1,4 @@
-﻿namespace Net.ProjectEuler.Framework.Service;
+﻿namespace Dev.Concision.Ascii;
 
 public interface ITreeListRenderer
 {

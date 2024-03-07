@@ -9,6 +9,7 @@ public interface IProjectEulerCli
 {
     Task<int> ExecuteCliCommand(params string[] cliArguments);
 }
+
 public class ProjectEulerCli : IProjectEulerCli
 {
     private readonly ILogger logger;
@@ -29,7 +30,7 @@ public class ProjectEulerCli : IProjectEulerCli
 
     public async Task<int> ExecuteCliCommand(params string[] cliArguments)
     {
-        var cliParseResult = parser.ParseArguments(cliArguments, cliCommands.Select(subcommand => subcommand.ArgumentType).ToArray());
+        var cliParseResult =  parser.ParseArguments(cliArguments, cliCommands.Select(subcommand => subcommand.ArgumentType).ToArray());
 
         if (cliParseResult.Errors.Any())
         {
@@ -44,6 +45,6 @@ public class ProjectEulerCli : IProjectEulerCli
             return -1;
         }
 
-        return await command.ExecuteAsync(cliParseResult.Value);
+        return await command.ExecuteAsync((CliArgs)cliParseResult.Value);
     }
 }

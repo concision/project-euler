@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>Dev.Concision.ProjectEuler</RootNamespace>
-        <AssemblyName>Dev.Concision.ProjectEuler</AssemblyName>
+        <RootNamespace>Dev.Concision.Ascii</RootNamespace>
+        <AssemblyName>Dev.Concision.Ascii</AssemblyName>
 
         <Version>0.1.0</Version>
         <Authors>concision</Authors>

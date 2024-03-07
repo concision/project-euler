@@ -1,4 +1,5 @@
 ﻿using Crayon;
+using Dev.Concision.Ascii;
 using Nito.Disposables;
 
 namespace Net.ProjectEuler.Framework.Service;
@@ -16,8 +17,8 @@ public interface IStopwatchService
 
 public class TimedNode
 {
-    public int Depth { get; set; }
-    public string Text { get; set; }
+    public required int Depth { get; init; }
+    public required string Text { get; init; }
     public DateTime Started { get; set; }
     public DateTime Ended { get; set; }
 }
@@ -39,7 +40,6 @@ public class StopwatchService(ITreeListRenderer renderer) : IStopwatchService
             return (entry.Ended != DateTime.MinValue ? entry.Ended : DateTime.Now) - entry.Started;
         }
     }
-
 
     public IDisposable Start(string text)
     {
