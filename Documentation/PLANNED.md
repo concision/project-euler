@@ -89,6 +89,20 @@ A non-exhaustive list of planned features and libraries.
 - [ ] VSTest adapter for IDE integration executing benchmark/solution methods as "tests",
   e.g. `Dev.Concision.ProjectEuler.TestAdapter`
 
+- [ ] Integration with solutions written in other programming languages
+  - [ ] Driver API endpoints for invoking solutions written in other languages:
+     - [ ] Query all existing solutions
+     - [ ] Query a specific solution's functions; returns metadata labels:
+        - 'default' tag on a solution
+        - a human-readable display name
+        - default input parameter names and values
+        - value return type
+        - [ ] Invoke a specific solution's with (number, function name, solution parameters); returns answer + execution
+          time in nanoseconds
+  - [ ] Implement a C++ integration
+    - [ ] C# driver for invoking C++ solutions
+    - [ ] C++ library for invoking C# solutions
+
 ### Ansi
 
 - [ ] ANSI coloring library
