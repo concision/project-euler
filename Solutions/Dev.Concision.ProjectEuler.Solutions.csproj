@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>Dev.Concision.ProjectEuler.Solutions</RootNamespace>
+        <RootNamespace>Dev.Concision.ProjectEuler</RootNamespace>
         <AssemblyName>Dev.Concision.ProjectEuler.Solutions</AssemblyName>
 
         <Version>0.1.0</Version>
