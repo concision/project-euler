@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions", "Solutions", "{BEE686AE-9408-480D-AEB6-B9BB43634E11}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Items", ".Solution Items", "{D8A739EF-6F65-4B46-AA24-47E6F5E33042}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -19,16 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.ProjectEuler.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Library\Math\Net.ProjectEuler.Math.csproj", "{B13D5F7E-9064-40B8-979F-C77E41B76083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.ProjectEuler", "Solutions\concision\Dev.Concision.ProjectEuler.csproj", "{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Me.TheNintendoDude.ProjectEuler", "Solutions\thenintendodude\Me.TheNintendoDude.ProjectEuler.csproj", "{6C81B853-C6AA-4C86-8CB8-663A10099914}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.Ascii", "Library\Ascii\Dev.Concision.Ascii.csproj", "{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{7AB2602B-8266-4A24-B6A4-8094C6A5A8E6}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\PLANNED.md = Documentation\PLANNED.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Concision.ProjectEuler.Solutions", "Solutions\Dev.Concision.ProjectEuler.Solutions.csproj", "{DCD7DB8C-7D27-4792-9943-3FFE06A36DA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,31 +36,25 @@ Global
 		{910A3621-9D82-4A16-B218-4096C44DF449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{910A3621-9D82-4A16-B218-4096C44DF449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{910A3621-9D82-4A16-B218-4096C44DF449}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B13D5F7E-9064-40B8-979F-C77E41B76083}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C81B853-C6AA-4C86-8CB8-663A10099914}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD7DB8C-7D27-4792-9943-3FFE06A36DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD7DB8C-7D27-4792-9943-3FFE06A36DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD7DB8C-7D27-4792-9943-3FFE06A36DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD7DB8C-7D27-4792-9943-3FFE06A36DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{910A3621-9D82-4A16-B218-4096C44DF449} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
-		{13F4F0AE-47B9-4DD1-8F6F-8DDA893A7FCC} = {BEE686AE-9408-480D-AEB6-B9BB43634E11}
 		{B13D5F7E-9064-40B8-979F-C77E41B76083} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
-		{6C81B853-C6AA-4C86-8CB8-663A10099914} = {BEE686AE-9408-480D-AEB6-B9BB43634E11}
 		{7A6B3EE8-9A11-405D-AD5C-A0339167F1D3} = {F36F2328-FED1-4EC2-BAC3-C40FFA541BA3}
 		{7AB2602B-8266-4A24-B6A4-8094C6A5A8E6} = {D8A739EF-6F65-4B46-AA24-47E6F5E33042}
 	EndGlobalSection
