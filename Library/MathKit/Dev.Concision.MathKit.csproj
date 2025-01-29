@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>Net.ProjectEuler.Math</RootNamespace>
-        <AssemblyName>Net.ProjectEuler.Math</AssemblyName>
+        <RootNamespace>Dev.Concision.MathLibrary</RootNamespace>
 
         <Version>0.1.0</Version>
-        <Authors>concision,thenintendodude</Authors>
+        <Authors>concision</Authors>
 
         <TargetFramework>net8.0</TargetFramework>
         <LangVersion>12</LangVersion>
@@ -13,11 +12,11 @@
         <Nullable>enable</Nullable>
         <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <PackageId>Dev.Concision.MathKit</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
         <Folder Include="Combinatorics\" />
-        <Folder Include="Sieves\" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,5 @@
+﻿[*]
+end_of_line = lf
+insert_final_newline = true
+ij_any_wrap_long_lines = false
+resharper_csharp_keep_existing_attribute_arrangement = true
