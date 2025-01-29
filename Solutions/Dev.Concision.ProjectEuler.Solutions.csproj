@@ -18,6 +18,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Library\Framework\Dev.Concision.ProjectEuler.Framework.csproj" />
+        <ProjectReference Include="..\Library\MathKit\Dev.Concision.MathKit.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>Dev.Concision.MathLibrary</RootNamespace>
-
+        <RootNamespace>Dev.Concision.MathKit</RootNamespace>
+        <AssemblyName>Dev.Concision.MathKit</AssemblyName>
+        
         <Version>0.1.0</Version>
         <Authors>concision</Authors>
 
@@ -12,7 +13,6 @@
         <Nullable>enable</Nullable>
         <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <PackageId>Dev.Concision.MathKit</PackageId>
     </PropertyGroup>
 
     <ItemGroup>

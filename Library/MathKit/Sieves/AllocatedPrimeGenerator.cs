@@ -1,4 +1,4 @@
-namespace Dev.Concision.ProjectEuler.Library;
+namespace Dev.Concision.MathKit.Sieves;
 
 /// <summary>
 /// TODO: rewrite this

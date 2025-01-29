@@ -64,6 +64,11 @@ public abstract class Solver<T>
     /// statements. This permits derived classes to syntactically-easily 'build' an answer during execution.
     /// </remarks>
     public T Answer { get; protected set; } = default!;
+
+    protected void Log(object? obj = null)
+    {
+        Logger.LogInformation(obj == null ? "" : obj.ToString());
+    }
 }
 
 /// <summary>
